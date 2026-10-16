@@ -43,3 +43,9 @@ anteriores no se reescriben: si una cambia, se agrega la nueva y se anota a cuá
     documentos.
 20. Idiomas: **español, inglés y portugués**.
 21. Los colores, que se los muestre como **opciones** para elegir.
+22. El abogado entra **solo con su cuenta de Google**.
+23. El firmante **puede firmar desde el teléfono**.
+24. Por cada paso de cada firmante se guarda **fecha y hora, IP y navegador**; el abogado lo
+    ve en el detalle y no se envía.
+25. **Lo primero es la interfaz y que funcione.** Los aspectos legales se le vuelven a
+    preguntar cuando esté definida la interfaz. Con esto aprueba la especificación 001.
