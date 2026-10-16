@@ -11,10 +11,10 @@
     --verde: #1f7a4d; --rojo: #b42318; --ambar: #b26a00; --gris: #6b7280;
   }
   * { box-sizing: border-box; }
-  body { margin: 0; font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--texto); background: var(--fondo); }
+  body { margin: 0; font: 15px/1.45 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--texto); background: var(--fondo); }
   .app { display: grid; grid-template-columns: 248px 1fr; min-height: 100vh; }
   aside { background: var(--marino); color: #e8ebf3; padding: 24px 18px; display: flex; flex-direction: column; gap: 22px; }
-  .marca { font: 700 24px/1 Georgia, "Times New Roman", serif; color: #fff; letter-spacing: .3px; }
+  .marca { font: 800 24px/1 Inter,system-ui,sans-serif; color: #fff; letter-spacing: -.5px; }
   .marca span { color: var(--oro); }
   .nuevo { display: block; text-align: center; background: var(--oro); color: var(--marino); font-weight: 700; padding: 13px; border-radius: 10px; text-decoration: none; font-size: 16px; }
   nav a { display: flex; justify-content: space-between; color: #cfd5e3; text-decoration: none; padding: 10px 12px; border-radius: 8px; margin-bottom: 4px; }
@@ -24,11 +24,11 @@
   .usuario b { color: #fff; display: block; }
   main { padding: 28px 36px; min-width: 0; }
   .cabeza { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 22px; }
-  h1 { font: 700 28px/1.2 Georgia, serif; margin: 0; color: var(--marino); }
+  h1 { font: 700 28px/1.2 Inter,system-ui,sans-serif; letter-spacing: -.6px; margin: 0; color: var(--marino); }
   .buscar { flex: 0 1 380px; padding: 11px 14px; border: 1px solid var(--borde); border-radius: 10px; background: #fff; font: inherit; }
   .estados { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 24px; }
   .estado { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 12px; padding: 14px; cursor: pointer; }
-  .estado b { display: block; font: 700 26px/1.1 Georgia, serif; }
+  .estado b { display: block; font: 700 26px/1.1 Inter,system-ui,sans-serif; letter-spacing: -.5px; }
   .estado span { color: var(--suave); font-size: 13px; }
   .estado.activo { border-color: var(--oro); box-shadow: 0 0 0 2px var(--oro-claro); }
   .estado.esperando b { color: var(--ambar); } .estado.completado b { color: var(--verde); } .estado.rechazado b, .estado.vencido b { color: var(--rojo); } .estado.anulado b, .estado.borrador b { color: var(--gris); }

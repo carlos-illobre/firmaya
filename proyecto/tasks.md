@@ -21,6 +21,6 @@ terminarla se marca `[x]`; no se borra.
 - [x] T004 [agente] [alta] Especificar la primera capacidad con /speckit-specify y /speckit-clarify (depende de T003)
 - [x] T005 [carlos] [alta] Aprobar la especificación de la primera capacidad (depende de T004)
 - [x] T006 [agente] Anotar que es el proyecto de menor prioridad del portafolio
-- [ ] T007 [agente] [alta] [en curso] Maquetas de la firma electrónica para que Carlos elija paleta y navegación (depende de T005)
-- [ ] T008 [carlos] [alta] Elegir y aprobar las maquetas de la firma electrónica (depende de T007)
+- [x] T007 [agente] [alta] Maquetas de la firma electrónica para que Carlos elija paleta y navegación (depende de T005)
+- [x] T008 [carlos] [alta] Elegir y aprobar las maquetas de la firma electrónica (depende de T007)
 - [ ] T009 [agente] Volver a preguntarle a Carlos los aspectos legales de la firma (depende de T008)

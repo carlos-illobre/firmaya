@@ -6,7 +6,7 @@
 
 **Status**: Aprobada (Carlos, 2026-10-16; los aspectos legales se revisan cuando esté definida la interfaz)
 
-**Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
+**Maquetas**: Aprobadas (Carlos, 2026-10-16: variante A con letra sin serifa; ver [ux.md](ux.md))
 
 **Input**: User description: "Un clon de DocuSign con mejor aspecto gráfico, una paleta de
 colores más llamativa pero profesional orientada a abogados, navegación sencilla y opciones
