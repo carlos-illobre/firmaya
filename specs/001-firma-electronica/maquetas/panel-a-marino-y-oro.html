@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FirmaYa · Panel · Variante A: marino y oro</title>
+<style>
+  :root {
+    --marino: #14213d; --marino-2: #1f3260; --oro: #c9a227; --oro-claro: #f5e9c4;
+    --fondo: #faf8f3; --tarjeta: #fff; --texto: #1c2333; --suave: #5b6476; --borde: #e7e2d6;
+    --verde: #1f7a4d; --rojo: #b42318; --ambar: #b26a00; --gris: #6b7280;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--texto); background: var(--fondo); }
+  .app { display: grid; grid-template-columns: 248px 1fr; min-height: 100vh; }
+  aside { background: var(--marino); color: #e8ebf3; padding: 24px 18px; display: flex; flex-direction: column; gap: 22px; }
+  .marca { font: 700 24px/1 Georgia, "Times New Roman", serif; color: #fff; letter-spacing: .3px; }
+  .marca span { color: var(--oro); }
+  .nuevo { display: block; text-align: center; background: var(--oro); color: var(--marino); font-weight: 700; padding: 13px; border-radius: 10px; text-decoration: none; font-size: 16px; }
+  nav a { display: flex; justify-content: space-between; color: #cfd5e3; text-decoration: none; padding: 10px 12px; border-radius: 8px; margin-bottom: 4px; }
+  nav a.activo { background: var(--marino-2); color: #fff; box-shadow: inset 3px 0 0 var(--oro); }
+  nav a small { color: #9aa5bf; }
+  .usuario { margin-top: auto; font-size: 13px; color: #aab3c8; border-top: 1px solid #2c3d66; padding-top: 14px; }
+  .usuario b { color: #fff; display: block; }
+  main { padding: 28px 36px; min-width: 0; }
+  .cabeza { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 22px; }
+  h1 { font: 700 28px/1.2 Georgia, serif; margin: 0; color: var(--marino); }
+  .buscar { flex: 0 1 380px; padding: 11px 14px; border: 1px solid var(--borde); border-radius: 10px; background: #fff; font: inherit; }
+  .estados { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 24px; }
+  .estado { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 12px; padding: 14px; cursor: pointer; }
+  .estado b { display: block; font: 700 26px/1.1 Georgia, serif; }
+  .estado span { color: var(--suave); font-size: 13px; }
+  .estado.activo { border-color: var(--oro); box-shadow: 0 0 0 2px var(--oro-claro); }
+  .estado.esperando b { color: var(--ambar); } .estado.completado b { color: var(--verde); } .estado.rechazado b, .estado.vencido b { color: var(--rojo); } .estado.anulado b, .estado.borrador b { color: var(--gris); }
+  table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--borde); border-radius: 12px; overflow: hidden; }
+  th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .6px; color: var(--suave); padding: 12px 16px; background: #f4f1e8; }
+  td { padding: 14px 16px; border-top: 1px solid var(--borde); vertical-align: middle; }
+  td .titulo { font-weight: 600; color: var(--marino); }
+  td .sub { color: var(--suave); font-size: 13px; }
+  .chip { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .c-esperando { background: #fff3dc; color: var(--ambar); } .c-completado { background: #e3f4ea; color: var(--verde); }
+  .c-rechazado, .c-vencido { background: #fde8e6; color: var(--rojo); } .c-borrador, .c-anulado { background: #eef0f3; color: var(--gris); }
+  .barra { height: 6px; background: #eee9dc; border-radius: 3px; width: 120px; margin-top: 6px; }
+  .barra i { display: block; height: 100%; background: var(--oro); border-radius: 3px; }
+  .aviso { color: var(--rojo); font-size: 12px; font-weight: 600; }
+  .solo-celu { display: none; }
+  @media (max-width: 760px) {
+    .app { grid-template-columns: 1fr; }
+    aside { padding: 14px 16px; flex-direction: row; align-items: center; justify-content: space-between; }
+    aside nav, aside .usuario, .nuevo { display: none; }
+    .solo-celu { display: block; }
+    main { padding: 18px 16px; }
+    .cabeza { flex-direction: column; align-items: stretch; }
+    h1 { font-size: 24px; }
+    .buscar { flex: none; }
+    .estados { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .estado { padding: 10px; } .estado b { font-size: 20px; }
+    table, thead, tbody, tr, td { display: block; } thead { display: none; }
+    tr { border-top: 1px solid var(--borde); padding: 12px 14px; } td { border: 0; padding: 2px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <div class="marca">Firma<span>Ya</span></div>
+    <a class="nuevo" href="#">+ Nuevo envío</a>
+    <nav>
+      <a class="activo" href="#">Panel <small>170</small></a>
+      <a href="#">Plantillas <small>8</small></a>
+    </nav>
+    <span class="solo-celu" style="font-size:13px;color:#cfd5e3">Dra. Valentina M.</span>
+    <div class="usuario"><b>Dra. Valentina Montes de Oca</b>valentina.ejemplo@correo.test<br>Español ▾ · Salir</div>
+  </aside>
+  <main>
+    <div class="cabeza">
+      <h1>Mis documentos</h1>
+      <input class="buscar" placeholder="Buscar por título, firmante o correo…">
+    </div>
+    <div class="estados">
+      <div class="estado borrador"><b>3</b><span>Borradores</span></div>
+      <div class="estado esperando activo"><b>12</b><span>Esperando firmas</span></div>
+      <div class="estado completado"><b>148</b><span>Completados</span></div>
+      <div class="estado rechazado"><b>2</b><span>Rechazados</span></div>
+      <div class="estado vencido"><b>4</b><span>Vencidos</span></div>
+      <div class="estado anulado"><b>1</b><span>Anulados</span></div>
+    </div>
+    <table>
+      <thead><tr><th>Documento</th><th>Firmantes</th><th>Estado</th><th>Último movimiento</th></tr></thead>
+      <tbody>
+        <tr><td><div class="titulo">Convenio de honorarios · Sucesión Fernández Ocampo de Larralde y otros</div><div class="sub">2 documentos</div></td>
+            <td>1 de 3 firmaron<div class="barra"><i style="width:33%"></i></div></td><td><span class="chip c-esperando">Esperando firmas</span></td><td class="sub">Hoy 10:42 · abrió Marcelo Ocampo</td></tr>
+        <tr><td><div class="titulo">Acuerdo de confidencialidad · Distribuidora del Litoral S.R.L.</div><div class="aviso">Vence en 2 días</div></td>
+            <td>0 de 2 firmaron<div class="barra"><i style="width:0"></i></div></td><td><span class="chip c-esperando">Esperando firmas</span></td><td class="sub">Ayer · recordatorio enviado</td></tr>
+        <tr><td><div class="titulo">Poder general judicial · R. Medina</div><div class="sub">1 documento</div></td>
+            <td>2 de 2 firmaron<div class="barra"><i style="width:100%"></i></div></td><td><span class="chip c-completado">Completado</span></td><td class="sub">14 oct · PDF enviado a todos</td></tr>
+        <tr><td><div class="titulo">Contrato de locación · Av. Corrientes 1234, 5.º B</div><div class="sub">Motivo: «El monto del depósito no es el acordado»</div></td>
+            <td>1 de 2 firmaron</td><td><span class="chip c-rechazado">Rechazado</span></td><td class="sub">13 oct · rechazó Laura Benítez</td></tr>
+        <tr><td><div class="titulo">Cesión de derechos litigiosos</div><div class="sub">Sin enviar</div></td>
+            <td class="sub">Sin firmantes</td><td><span class="chip c-borrador">Borrador</span></td><td class="sub">12 oct</td></tr>
+      </tbody>
+    </table>
+  </main>
+</div>
+</body>
+</html>

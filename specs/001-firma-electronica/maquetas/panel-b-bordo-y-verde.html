@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FirmaYa · Panel · Variante B: bordó y verde</title>
+<style>
+  :root {
+    --bordo: #7a1e3a; --bordo-osc: #5c1229; --verde: #0f766e; --verde-claro: #d6f1ec;
+    --fondo: #f7f4f2; --texto: #241a1e; --suave: #6b5f64; --borde: #eadfe2;
+    --ambar: #a15c00; --rojo: #b42318; --gris: #6b7280;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--texto); background: var(--fondo); }
+  header { background: var(--bordo); color: #fff; }
+  .barra { max-width: 1240px; margin: 0 auto; padding: 14px 28px; display: flex; align-items: center; gap: 28px; }
+  .marca { font: 700 22px/1 Georgia, serif; }
+  .marca::before { content: "✒ "; color: #f3c5d2; }
+  header nav { display: flex; gap: 6px; }
+  header nav a { color: #f3dbe2; text-decoration: none; padding: 8px 14px; border-radius: 999px; }
+  header nav a.activo { background: rgba(255,255,255,.16); color: #fff; }
+  .derecha { margin-left: auto; display: flex; align-items: center; gap: 16px; font-size: 14px; color: #f3dbe2; }
+  .nuevo { background: #fff; color: var(--bordo); font-weight: 700; padding: 10px 18px; border-radius: 999px; text-decoration: none; }
+  .avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--verde); display: grid; place-items: center; font-weight: 700; color: #fff; }
+  .hero { background: linear-gradient(var(--bordo), var(--bordo-osc)); padding: 6px 28px 34px; }
+  .hero input { display: block; max-width: 720px; margin: 0 auto; width: 100%; padding: 15px 20px; border: 0; border-radius: 14px; font: inherit; font-size: 16px; box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+  main { max-width: 1240px; margin: -18px auto 0; padding: 0 28px 40px; }
+  .pestanas { display: flex; gap: 8px; flex-wrap: wrap; background: #fff; padding: 8px; border-radius: 14px; border: 1px solid var(--borde); margin-bottom: 18px; }
+  .pestanas a { padding: 9px 14px; border-radius: 10px; text-decoration: none; color: var(--suave); font-weight: 600; font-size: 14px; }
+  .pestanas a b { margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: #f1ebed; color: var(--texto); font-size: 12px; }
+  .pestanas a.activo { background: var(--verde-claro); color: var(--verde); }
+  .pestanas a.activo b { background: var(--verde); color: #fff; }
+  .lista { display: grid; gap: 12px; }
+  .doc { background: #fff; border: 1px solid var(--borde); border-left: 5px solid var(--ambar); border-radius: 12px; padding: 16px 20px; display: grid; grid-template-columns: 1fr auto auto; gap: 18px; align-items: center; }
+  .doc.completado { border-left-color: var(--verde); } .doc.rechazado { border-left-color: var(--rojo); } .doc.borrador { border-left-color: var(--gris); }
+  .doc h3 { margin: 0 0 4px; font: 600 17px/1.3 Georgia, serif; color: var(--bordo-osc); }
+  .doc p { margin: 0; color: var(--suave); font-size: 13px; }
+  .firmantes { display: flex; } .firmantes span { width: 32px; height: 32px; border-radius: 50%; border: 2px solid #fff; margin-left: -4px; display: grid; place-items: center; font-size: 12px; font-weight: 700; color: #fff; }
+  .firmantes span.ok::after { content: "✓"; position: absolute; }
+  .f1 { background: #2563eb; } .f2 { background: #c2410c; } .f3 { background: #7c3aed; }
+  .firmo { box-shadow: 0 0 0 2px var(--verde); }
+  .estado { font-size: 13px; font-weight: 700; color: var(--ambar); white-space: nowrap; }
+  .completado .estado { color: var(--verde); } .rechazado .estado { color: var(--rojo); } .borrador .estado { color: var(--gris); }
+  .urgente { color: var(--rojo); font-weight: 600; }
+  @media (max-width: 760px) {
+    .barra { padding: 12px 16px; gap: 12px; } header nav, .nuevo, .derecha span { display: none; }
+    .hero { padding: 4px 16px 28px; }
+    main { padding: 0 16px 28px; }
+    .pestanas { flex-wrap: nowrap; overflow-x: auto; }
+    .pestanas a { white-space: nowrap; }
+    .doc { grid-template-columns: 1fr; gap: 6px; padding: 14px; } .doc .firmantes { display: none; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="barra">
+    <div class="marca">FirmaYa</div>
+    <nav><a class="activo" href="#">Documentos</a><a href="#">Plantillas</a></nav>
+    <div class="derecha"><a class="nuevo" href="#">+ Nuevo envío</a><span>ES ▾</span><div class="avatar">VM</div></div>
+  </div>
+</header>
+<div class="hero"><input placeholder="Buscar un documento por título, firmante o correo…"></div>
+<main>
+  <div class="pestanas">
+    <a href="#">Todos<b>170</b></a>
+    <a class="activo" href="#">Esperando firmas<b>12</b></a>
+    <a href="#">Borradores<b>3</b></a>
+    <a href="#">Completados<b>148</b></a>
+    <a href="#">Rechazados<b>2</b></a>
+    <a href="#">Vencidos<b>4</b></a>
+    <a href="#">Anulados<b>1</b></a>
+  </div>
+  <div class="lista">
+    <div class="doc"><div><h3>Convenio de honorarios · Sucesión Fernández Ocampo de Larralde y otros</h3><p>Enviado el 15 oct · 1 de 3 firmaron · abrió Marcelo Ocampo hoy 10:42</p></div>
+      <div class="firmantes"><span class="f1 firmo">VM</span><span class="f2">MO</span><span class="f3">IL</span></div><div class="estado">Esperando firmas</div></div>
+    <div class="doc"><div><h3>Acuerdo de confidencialidad · Distribuidora del Litoral S.R.L.</h3><p><span class="urgente">Vence en 2 días</span> · 0 de 2 firmaron · recordatorio enviado ayer</p></div>
+      <div class="firmantes"><span class="f1">JP</span><span class="f2">AG</span></div><div class="estado">Esperando firmas</div></div>
+    <div class="doc"><div><h3>Mandato para trámite registral · Inmobiliaria Paraná</h3><p>Enviado el 10 oct · 2 de 3 firmaron</p></div>
+      <div class="firmantes"><span class="f1 firmo">VM</span><span class="f2 firmo">CR</span><span class="f3">TS</span></div><div class="estado">Esperando firmas</div></div>
+    <div class="doc completado"><div><h3>Poder general judicial · R. Medina</h3><p>Completado el 14 oct · PDF enviado a todos</p></div>
+      <div class="firmantes"><span class="f1 firmo">VM</span><span class="f2 firmo">RM</span></div><div class="estado">Completado</div></div>
+  </div>
+</main>
+</body>
+</html>

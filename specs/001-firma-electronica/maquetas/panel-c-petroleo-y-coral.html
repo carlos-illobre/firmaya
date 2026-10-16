@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FirmaYa · Panel · Variante C: petróleo y coral</title>
+<style>
+  :root {
+    --petroleo: #0b4f6c; --petroleo-osc: #083a50; --coral: #e85d4a; --coral-claro: #fde4df;
+    --menta: #2a9d8f; --fondo: #f3f6f8; --texto: #13232d; --suave: #5a6b76; --borde: #dde5ea;
+    --ambar: #b26a00; --gris: #6b7280;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--texto); background: var(--fondo); }
+  header { background: #fff; border-bottom: 1px solid var(--borde); }
+  .barra { max-width: 1280px; margin: 0 auto; padding: 14px 28px; display: flex; align-items: center; gap: 22px; }
+  .marca { font: 800 22px/1 system-ui, sans-serif; color: var(--petroleo); letter-spacing: -.3px; }
+  .marca i { font-style: normal; color: var(--coral); }
+  .buscar { flex: 1; max-width: 520px; padding: 10px 14px; border: 1px solid var(--borde); border-radius: 10px; font: inherit; background: var(--fondo); }
+  .derecha { margin-left: auto; font-size: 14px; color: var(--suave); display: flex; gap: 14px; align-items: center; }
+  main { max-width: 1280px; margin: 0 auto; padding: 26px 28px; display: grid; grid-template-columns: 1fr 320px; gap: 24px; }
+  h1 { margin: 0 0 4px; font: 700 26px/1.2 Georgia, serif; color: var(--petroleo-osc); }
+  .bajada { color: var(--suave); margin: 0 0 18px; }
+  .atencion { background: #fff; border: 1px solid var(--borde); border-radius: 14px; overflow: hidden; margin-bottom: 22px; }
+  .atencion h2 { margin: 0; padding: 14px 18px; font-size: 14px; text-transform: uppercase; letter-spacing: .6px; color: var(--coral); background: var(--coral-claro); }
+  .fila { display: flex; gap: 14px; align-items: center; padding: 14px 18px; border-top: 1px solid var(--borde); }
+  .fila .icono { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; font-weight: 800; color: #fff; flex: none; }
+  .fila .t { flex: 1; min-width: 0; } .fila .t b { display: block; color: var(--petroleo-osc); }
+  .fila .t span { color: var(--suave); font-size: 13px; }
+  .fila a { color: var(--petroleo); font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .resumen { display: grid; grid-template-columns: repeat(6, 1fr); background: #fff; border: 1px solid var(--borde); border-radius: 14px; margin-bottom: 22px; }
+  .resumen div { padding: 14px; border-left: 1px solid var(--borde); } .resumen div:first-child { border: 0; }
+  .resumen b { display: block; font-size: 22px; color: var(--petroleo); } .resumen span { font-size: 12px; color: var(--suave); }
+  .resumen div.activo { box-shadow: inset 0 -3px 0 var(--coral); }
+  .acciones { display: grid; gap: 12px; align-content: start; }
+  .gran { display: block; background: var(--coral); color: #fff; text-decoration: none; padding: 22px; border-radius: 16px; font-weight: 700; font-size: 18px; box-shadow: 0 8px 22px rgba(232,93,74,.28); }
+  .gran small { display: block; font-weight: 400; font-size: 13px; opacity: .9; margin-top: 4px; }
+  .secundaria { display: block; background: #fff; color: var(--petroleo); border: 1px solid var(--borde); text-decoration: none; padding: 16px 18px; border-radius: 14px; font-weight: 600; }
+  .secundaria small { display: block; color: var(--suave); font-weight: 400; font-size: 13px; }
+  .plantillas { background: var(--petroleo); color: #e3f0f5; border-radius: 14px; padding: 16px 18px; }
+  .plantillas h3 { margin: 0 0 8px; font-size: 14px; color: #fff; }
+  .plantillas a { display: block; color: #e3f0f5; text-decoration: none; padding: 7px 0; border-top: 1px solid rgba(255,255,255,.15); font-size: 14px; }
+  @media (max-width: 760px) {
+    .barra { padding: 12px 16px; flex-wrap: wrap; gap: 10px; } .buscar { order: 3; flex-basis: 100%; max-width: none; }
+    main { grid-template-columns: 1fr; padding: 18px 16px; }
+    .acciones { display: none; }
+    .resumen { grid-template-columns: repeat(3, 1fr); } .resumen div:nth-child(4) { border-left: 0; } .resumen div:nth-child(n+4) { border-top: 1px solid var(--borde); }
+    .fila a { display: none; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="barra">
+    <div class="marca">Firma<i>Ya</i></div>
+    <input class="buscar" placeholder="Buscar por título, firmante o correo…">
+    <div class="derecha"><span>Español ▾</span><b style="color:var(--petroleo)">Dra. V. Montes de Oca</b></div>
+  </div>
+</header>
+<main>
+  <section>
+    <h1>Buen día, Valentina</h1>
+    <p class="bajada">Tenés 12 documentos esperando firmas y 3 que necesitan tu atención.</p>
+    <div class="resumen">
+      <div><b>3</b><span>Borradores</span></div>
+      <div class="activo"><b>12</b><span>Esperando firmas</span></div>
+      <div><b>148</b><span>Completados</span></div>
+      <div><b>2</b><span>Rechazados</span></div>
+      <div><b>4</b><span>Vencidos</span></div>
+      <div><b>1</b><span>Anulados</span></div>
+    </div>
+    <div class="atencion">
+      <h2>Necesita tu atención</h2>
+      <div class="fila"><div class="icono" style="background:var(--coral)">!</div><div class="t"><b>Contrato de locación · Av. Corrientes 1234, 5.º B</b><span>Rechazado por Laura Benítez: «El monto del depósito no es el acordado»</span></div><a href="#">Ver detalle →</a></div>
+      <div class="fila"><div class="icono" style="background:var(--ambar)">2d</div><div class="t"><b>Acuerdo de confidencialidad · Distribuidora del Litoral S.R.L.</b><span>Vence en 2 días · 0 de 2 firmaron</span></div><a href="#">Reenviar →</a></div>
+      <div class="fila"><div class="icono" style="background:var(--gris)">@</div><div class="t"><b>Convenio de honorarios · Sucesión Fernández Ocampo de Larralde y otros</b><span>No se pudo entregar el correo a ines.larralde@correo.test</span></div><a href="#">Corregir →</a></div>
+    </div>
+    <div class="atencion">
+      <h2 style="color:var(--petroleo);background:#e3eef3">Movimientos recientes</h2>
+      <div class="fila"><div class="icono" style="background:var(--menta)">✓</div><div class="t"><b>Poder general judicial · R. Medina</b><span>Completado el 14 oct · PDF enviado a todos</span></div><a href="#">Descargar</a></div>
+      <div class="fila"><div class="icono" style="background:var(--petroleo)">👁</div><div class="t"><b>Convenio de honorarios · Sucesión Fernández Ocampo de Larralde y otros</b><span>Marcelo Ocampo abrió el documento hoy 10:42</span></div><a href="#">Ver detalle →</a></div>
+    </div>
+  </section>
+  <aside class="acciones">
+    <a class="gran" href="#">+ Nuevo envío<small>Subí un PDF o un Word y elegí quién firma</small></a>
+    <a class="secundaria" href="#">Usar una plantilla<small>Poderes, honorarios, confidencialidad…</small></a>
+    <div class="plantillas"><h3>Tus plantillas más usadas</h3><a href="#">Poder general judicial</a><a href="#">Convenio de honorarios</a><a href="#">Acuerdo de confidencialidad</a></div>
+  </aside>
+</main>
+</body>
+</html>
