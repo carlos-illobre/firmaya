@@ -7,4 +7,143 @@
 #   defectos  Dónde el código de hoy se aparta de la regla, o qué le falta.
 #
 # Lo leen el tablero del portafolio y tests/trazabilidad.mjs. Todo texto va entre comillas.
-# Todavía no hay requerimientos.
+RF-01:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-02:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-03:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-04:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-05:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-06:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-07:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-08:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-09:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-10:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-11:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-12:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-13:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-14:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-15:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-16:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-17:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-18:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-19:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-20:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-21:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-22:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-23:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-24:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-25:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-26:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-27:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-28:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RF-29:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RNF-01:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RNF-02:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RNF-03:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RNF-04:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RNF-05:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []
+RNF-06:
+  estado: "Nuevo"
+  pruebas: []
+  defectos: []

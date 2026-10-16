@@ -21,3 +21,25 @@ anteriores no se reescriben: si una cambia, se agrega la nueva y se anota a cuá
 6. El aspecto gráfico tiene que ser mejor que el de DocuSign: una paleta de colores **más
    llamativa pero profesional**, pensada para abogados.
 7. La navegación tiene que ser **sencilla** y las opciones **fáciles de encontrar**.
+
+## Decisiones del 2026-10-16 (respuestas para la especificación 001)
+
+8. Por ahora es **gratis**: no paga nadie y no hay cobro en esta versión. **No hay roles.**
+9. Los firmantes firman **desde un enlace**, sin cuenta, y el enlace es lo único que se les
+   pide para identificarse.
+10. Tiene que valer en **Argentina**. Esta versión es de **firma electrónica simple**; la
+    **firma digital** queda para una versión posterior.
+11. Se suben **PDF y Word**, que se convierte. El tamaño máximo es **el mismo que DocuSign**.
+12. Entran **todos los campos** (firma, iniciales, fecha, nombre, casilla, texto libre) y las
+    **tres formas de firmar** (dibujar, escribir, subir una imagen).
+13. Con varios firmantes, firman **todos a la vez**, y hay **copias para todos**, también para
+    quien solo recibe.
+14. El firmante puede **rechazar** y el abogado puede **anular**.
+15. Hay **recordatorios** automáticos y **fecha de vencimiento**.
+16. Al terminar se entrega **solo el PDF** firmado; el certificado llega con la firma digital.
+17. Las **plantillas** entran en esta versión, y también el **panel** con estados y buscador.
+18. Los documentos **duran hasta que el abogado los borra**.
+19. **Solo computadora**; en el teléfono, solo ver el seguimiento y el estado de los
+    documentos.
+20. Idiomas: **español, inglés y portugués**.
+21. Los colores, que se los muestre como **opciones** para elegir.
