@@ -4,7 +4,7 @@
 
 **Created**: 2026-10-16
 
-**Status**: Borrador  <!-- pasa a «Aprobada» cuando Carlos aprueba la especificación -->
+**Status**: Aprobada (Carlos, 2026-10-16; los aspectos legales se revisan cuando esté definida la interfaz)
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 
@@ -235,9 +235,8 @@ la aplicación en portugués.
 
 **Acceptance Scenarios**:
 
-1. **E34** **Given** una persona sin cuenta, **When** se registra, **Then** el sistema
-   [NEEDS CLARIFICATION: ¿cómo se registra y entra el abogado? Ver la pregunta 1] y le crea
-   una cuenta gratuita.
+1. **E34** **Given** una persona sin cuenta, **When** se registra, **Then** entra con su cuenta de Google y el sistema le crea
+   una cuenta gratuita. No hay registro con correo y contraseña.
 2. **E35** **Given** un abogado con su cuenta, **When** elige español, inglés o portugués,
    **Then** toda la aplicación se le muestra en ese idioma.
 3. **E36** **Given** dos abogados con su cuenta, **When** uno entra, **Then** no ve nada de lo
@@ -266,8 +265,8 @@ la aplicación en portugués.
 
 **Cuenta**
 
-- **RF-01**: Cualquier persona MUST poder crearse una cuenta gratuita de abogado. La forma de
-  registrarse y entrar: [NEEDS CLARIFICATION: ver la pregunta 1].
+- **RF-01**: Cualquier persona MUST poder crearse una cuenta gratuita de abogado. Se registra y
+  entra solo con su cuenta de Google (decisión de Carlos, 2026-10-16).
 - **RF-02**: Cada abogado MUST ver y manejar solo sus documentos y sus plantillas. No hay roles
   ni cuentas compartidas.
 - **RF-03**: La aplicación MUST estar en español, inglés y portugués; el abogado elige el
@@ -331,7 +330,9 @@ la aplicación en portugués.
   vence y cuando se completa.
 - **RF-25**: El sistema MUST registrar, por cada firmante, cuándo se le envió, cuándo abrió el
   documento y cuándo firmó o rechazó.
-  [NEEDS CLARIFICATION: ¿se guarda además una constancia para probar la firma? Ver la pregunta 3]
+  Por cada paso guarda además la dirección IP y el navegador desde los que se hizo. El
+  abogado lo ve en el detalle del documento; no se envía ni va en el PDF (decisión de
+  Carlos, 2026-10-16).
 
 **Plantillas**
 
@@ -356,7 +357,7 @@ la aplicación en portugués.
   vista, sin menús escondidos.
 - **RNF-03**: **Dispositivos.** Preparar y enviar es solo en computadora. En el teléfono, el
   abogado puede ver el panel y el detalle de los documentos.
-  La página de firma: [NEEDS CLARIFICATION: ver la pregunta 2].
+  La página de firma anda en computadora y en teléfono (decisión de Carlos, 2026-10-16).
 - **RNF-04**: **El documento no cambia.** Lo que firma cada firmante es exactamente el
   documento que envió el abogado, y el PDF final es ese documento con las firmas y los campos
   completados, sin otro cambio.
@@ -403,4 +404,4 @@ la aplicación en portugués.
   no elige otro, es a los 30 días del envío.
 - Los correos salen a nombre de FirmaYa e indican qué abogado manda el documento.
 - La validez de la firma electrónica simple, si se la desconoce en un juicio, la tiene que
-  probar quien la invoca (ley 25.506, artículo 5). Por eso importa la pregunta 3.
+  probar quien la invoca (ley 25.506, artículo 5). Carlos pidió revisar los aspectos legales cuando esté definida la interfaz.

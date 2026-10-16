@@ -18,7 +18,7 @@ que cumpla todos los requerimientos, funcionales y no funcionales.
 
 | ID | Requerimiento | Especificación |
 |---|---|---|
-| RF-01 | Cuenta gratuita de abogado (forma de registro: pregunta abierta 1) | [001](001-firma-electronica/spec.md) |
+| RF-01 | Cuenta gratuita de abogado con Google | [001](001-firma-electronica/spec.md) |
 | RF-02 | Cada abogado ve solo lo suyo; sin roles | [001](001-firma-electronica/spec.md) |
 | RF-03 | Aplicación en español, inglés y portugués | [001](001-firma-electronica/spec.md) |
 | RF-04 | Subir PDF y Word (.doc, .docx) de hasta 25 MB; el Word se convierte a PDF | [001](001-firma-electronica/spec.md) |
@@ -42,14 +42,14 @@ que cumpla todos los requerimientos, funcionales y no funcionales.
 | RF-22 | Vencimiento automático | [001](001-firma-electronica/spec.md) |
 | RF-23 | Rechazado, anulado, vencido o borrado no se firma | [001](001-firma-electronica/spec.md) |
 | RF-24 | Avisos al abogado: rechazo, vencimiento, completado | [001](001-firma-electronica/spec.md) |
-| RF-25 | Registro de pasos por firmante (constancia: pregunta abierta 3) | [001](001-firma-electronica/spec.md) |
+| RF-25 | Registro de pasos por firmante con IP y navegador | [001](001-firma-electronica/spec.md) |
 | RF-26 | Plantillas con papeles de firmante | [001](001-firma-electronica/spec.md) |
 | RF-27 | Usar una plantilla crea un borrador independiente | [001](001-firma-electronica/spec.md) |
 | RF-28 | Se guarda hasta que el abogado lo borra | [001](001-firma-electronica/spec.md) |
 | RF-29 | Borrar para siempre, salvo lo que espera firmas | [001](001-firma-electronica/spec.md) |
 | RNF-01 | Paleta llamativa pero profesional, para abogados | [001](001-firma-electronica/spec.md) |
 | RNF-02 | Navegación sencilla: panel y «Nuevo envío» a un clic | [001](001-firma-electronica/spec.md) |
-| RNF-03 | Preparar y enviar solo en computadora; en el teléfono, ver (firma: pregunta abierta 2) | [001](001-firma-electronica/spec.md) |
+| RNF-03 | Preparar y enviar solo en computadora; en el teléfono, ver ; la firma, también en el teléfono | [001](001-firma-electronica/spec.md) |
 | RNF-04 | El documento firmado es el enviado, sin otro cambio | [001](001-firma-electronica/spec.md) |
 | RNF-05 | El enlace de cada firmante es secreto | [001](001-firma-electronica/spec.md) |
 | RNF-06 | Ningún dato real como dato de prueba | [001](001-firma-electronica/spec.md) |

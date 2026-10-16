@@ -8,9 +8,6 @@ Solo Carlos las puede contestar. Cada respuesta se anota con su fecha en
 [docs/decisiones-de-negocio.md](../docs/decisiones-de-negocio.md) y en la especificación
 que toca, y la pregunta se borra de acá.
 
-1. **Cómo se registra y entra el abogado** (001, RF-01). ¿Correo y contraseña, con su cuenta
-   de Google, o las dos? ¿Cualquiera se puede registrar?
-2. **Si el firmante puede firmar desde el teléfono** (001, RNF-03). Se decidió que preparar y
-   enviar es solo en computadora; falta decidir la página de firma.
-3. **Qué constancia se guarda para probar la firma** (001, RF-25). Con firma electrónica
-   simple, si alguien la desconoce, la tiene que probar quien la invoca.
+1. **Los aspectos legales de la firma** (001). Carlos pidió volver a preguntárselos cuando
+   esté definida la interfaz (2026-10-16): qué alcanza para probar una firma electrónica
+   simple, si la constancia de cada firmante se entrega, cuándo entra la firma digital.
