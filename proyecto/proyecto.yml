@@ -22,6 +22,7 @@ supuestos: []
 
 restricciones:
   - El repositorio es público; ningún dato real ni secreto entra en él
+  - Es el proyecto de menor prioridad del portafolio, después de todos los demás
 
 requerimientos: specs/README.md
 estado_de_requerimientos: proyecto/estado.yml

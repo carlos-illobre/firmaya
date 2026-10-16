@@ -11,3 +11,4 @@ anteriores no se reescriben: si una cambia, se agrega la nueva y se anota a cuá
    especificación.
 2. Se desarrolla con la misma metodología de spec driven development que `ferre` y
    `cocinadas`.
+3. Es el proyecto de menor prioridad del portafolio, después de todos los demás.
