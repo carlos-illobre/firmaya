@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FirmaYa · Firmar: adoptar firma, rechazar y finales</title>
+<style>
+:root{--marino:#14213d;--marino-2:#1f3260;--oro:#c9a227;--oro-claro:#f5e9c4;--fondo:#faf8f3;--tarjeta:#fff;--texto:#1c2333;--suave:#5b6476;--borde:#e7e2d6;--verde:#1f7a4d;--rojo:#b42318;--ambar:#b26a00;--gris:#6b7280;
+--f1:#2563eb;--f2:#c2410c;--f3:#7c3aed;}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--texto);background:var(--fondo)}
+.app{display:grid;grid-template-columns:248px 1fr;min-height:100vh}
+aside.menu{background:var(--marino);color:#e8ebf3;padding:24px 18px;display:flex;flex-direction:column;gap:22px}
+.marca{font:700 24px/1 Georgia,"Times New Roman",serif;color:#fff;letter-spacing:.3px}.marca span{color:var(--oro)}
+.nuevo{display:block;text-align:center;background:var(--oro);color:var(--marino);font-weight:700;padding:13px;border-radius:10px;text-decoration:none;font-size:16px}
+nav a{display:flex;justify-content:space-between;color:#cfd5e3;text-decoration:none;padding:10px 12px;border-radius:8px;margin-bottom:4px}
+nav a.activo{background:var(--marino-2);color:#fff;box-shadow:inset 3px 0 0 var(--oro)}nav a small{color:#9aa5bf}
+.usuario{margin-top:auto;font-size:13px;color:#aab3c8;border-top:1px solid #2c3d66;padding-top:14px}.usuario b{color:#fff;display:block}
+main{padding:28px 36px;min-width:0}
+h1{font:700 28px/1.2 Georgia,serif;margin:0;color:var(--marino)}
+h2{font:700 19px/1.3 Georgia,serif;margin:0 0 12px;color:var(--marino)}
+.caja{background:#fff;border:1px solid var(--borde);border-radius:12px;padding:18px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:9px;border:1px solid var(--borde);background:#fff;color:var(--marino);font:600 14px system-ui,sans-serif;text-decoration:none;white-space:nowrap;cursor:pointer}
+.btn.oro{background:var(--oro);border-color:var(--oro);color:var(--marino)}
+.btn.marino{background:var(--marino);border-color:var(--marino);color:#fff}
+.btn.peligro{color:var(--rojo);border-color:#f2c4bf}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.chip{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.c-esperando{background:#fff3dc;color:var(--ambar)}.c-completado,.c-firmo{background:#e3f4ea;color:var(--verde)}.c-rechazado,.c-vencido{background:#fde8e6;color:var(--rojo)}.c-borrador,.c-anulado,.c-pendiente{background:#eef0f3;color:var(--gris)}.c-abrio{background:#e6edfb;color:#1d4ed8}
+.sub{color:var(--suave);font-size:13px}
+.aviso{background:#fde8e6;color:var(--rojo);border:1px solid #f2c4bf;border-radius:10px;padding:10px 14px;font-size:14px}
+.info{background:#fff8e6;color:#7a5600;border:1px solid #f0dca0;border-radius:10px;padding:10px 14px;font-size:14px}
+.ok{background:#e3f4ea;color:var(--verde);border:1px solid #b9e2c9;border-radius:10px;padding:10px 14px;font-size:14px}
+input,select,textarea{font:inherit;padding:9px 12px;border:1px solid var(--borde);border-radius:8px;background:#fff;color:var(--texto)}
+label{font-size:13px;color:var(--suave);display:block;margin-bottom:4px}
+.punto{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.solo-compu-aviso{display:none}
+@media (max-width:760px){
+ .app{grid-template-columns:1fr}
+ aside.menu{padding:14px 16px;flex-direction:row;align-items:center;justify-content:space-between}
+ aside.menu nav,aside.menu .usuario,aside.menu .nuevo{display:none}
+ main{padding:18px 16px}h1{font-size:24px}
+}
+
+main{max-width:1240px;margin:0 auto}
+.grilla{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:18px}
+.velo{background:rgba(20,33,61,.55);border-radius:14px;padding:26px;display:grid;place-items:center}
+.modal{background:#fff;border-radius:14px;padding:22px;width:100%;max-width:520px}
+.tabs{display:flex;gap:6px;margin:10px 0 14px}.tabs span{padding:8px 14px;border-radius:8px;background:#f4f1e8;font-weight:600;font-size:14px;color:var(--suave)}.tabs span.activo{background:var(--marino);color:#fff}
+.trazo{height:130px;border:1px dashed #cbbf98;border-radius:10px;background:#fffdf6;display:grid;place-items:center;font:italic 40px "Brush Script MT","Segoe Script",cursive;color:#1c2b6b}
+.pie{display:flex;justify-content:space-between;align-items:center;margin-top:14px;gap:8px;flex-wrap:wrap}
+.final{text-align:center;padding:34px 22px}.final .ic{font-size:44px}
+.titulo-estado{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--suave);margin-bottom:6px}
+@media(max-width:760px){.grilla{grid-template-columns:1fr}.velo{padding:12px}}
+</style>
+</head>
+<body>
+<main><h1>Página de firma: los otros momentos</h1><p class="sub">Cada recuadro es un estado de la misma página que ve el firmante.</p>
+<div class="grilla">
+<div><div class="titulo-estado">1 · Adoptar la firma (al tocar el primer campo de firma)</div><div class="velo"><div class="modal"><h2>Tu firma</h2>
+<div class="tabs"><span class="activo">Dibujar</span><span>Escribir</span><span>Subir imagen</span></div>
+<div class="trazo">Marcelo Ocampo</div>
+<div class="pie"><a class="sub" href="#">Borrar y volver a dibujar</a><span><a class="btn" href="#">Cancelar</a> <a class="btn oro" href="#">Usar esta firma</a></span></div>
+<p class="sub" style="margin:10px 0 0">Se usa en todos tus campos de firma de este documento.</p></div></div></div>
+<div><div class="titulo-estado">2 · Rechazar el documento</div><div class="velo"><div class="modal"><h2>Rechazar el documento</h2>
+<p class="sub">La Dra. Montes de Oca va a recibir tu motivo. Nadie más va a poder firmar este documento.</p>
+<label>Motivo (obligatorio)</label><textarea rows="3" style="width:100%">El porcentaje de honorarios no es el que conversamos.</textarea>
+<div class="pie"><a class="btn" href="#">Volver</a><a class="btn peligro" href="#">Rechazar el documento</a></div></div></div></div>
+<div><div class="titulo-estado">3 · Falta un campo obligatorio</div><div class="caja"><div class="aviso">Te falta completar <b>Iniciales</b> en la página 4.</div><br><a class="btn oro" href="#">Ir al campo</a></div></div>
+<div><div class="titulo-estado">4 · Firmó</div><div class="caja final"><div class="ic">✅</div><h2>¡Listo, firmaste!</h2><p class="sub">Cuando firmen todos, te llega por correo el PDF firmado.<br>Faltan: Inês Larralde.</p></div></div>
+<div><div class="titulo-estado">5 · Enlace que ya no sirve (anulado, rechazado, vencido o borrado)</div><div class="caja final"><div class="ic">🚫</div><h2>Este documento ya no se puede firmar</h2><p class="sub">La Dra. Montes de Oca lo anuló el 16 oct 2026.<br>Motivo: «Se envió con un error en el monto».</p></div></div>
+<div><div class="titulo-estado">6 · Vuelve a abrir el enlace después de firmar</div><div class="caja final"><div class="ic">🕓</div><h2>Ya firmaste este documento</h2><p class="sub">Firmaste el 16 oct 2026 a las 10:51. Esperando a 1 de 3 firmantes.</p></div></div>
+</div></main>
+</body>
+</html>

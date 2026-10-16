@@ -49,3 +49,5 @@ anteriores no se reescriben: si una cambia, se agrega la nueva y se anota a cuá
     ve en el detalle y no se envía.
 25. **Lo primero es la interfaz y que funcione.** Los aspectos legales se le vuelven a
     preguntar cuando esté definida la interfaz. Con esto aprueba la especificación 001.
+26. Del panel elige la **variante A, marino y oro**, con el menú a la izquierda: a los
+    abogados les gusta tener todas las opciones a mano y que no estén escondidas.

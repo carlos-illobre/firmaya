@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FirmaYa · Estados: vacío, cargando, error y sin conexión</title>
+<style>
+:root{--marino:#14213d;--marino-2:#1f3260;--oro:#c9a227;--oro-claro:#f5e9c4;--fondo:#faf8f3;--tarjeta:#fff;--texto:#1c2333;--suave:#5b6476;--borde:#e7e2d6;--verde:#1f7a4d;--rojo:#b42318;--ambar:#b26a00;--gris:#6b7280;
+--f1:#2563eb;--f2:#c2410c;--f3:#7c3aed;}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--texto);background:var(--fondo)}
+.app{display:grid;grid-template-columns:248px 1fr;min-height:100vh}
+aside.menu{background:var(--marino);color:#e8ebf3;padding:24px 18px;display:flex;flex-direction:column;gap:22px}
+.marca{font:700 24px/1 Georgia,"Times New Roman",serif;color:#fff;letter-spacing:.3px}.marca span{color:var(--oro)}
+.nuevo{display:block;text-align:center;background:var(--oro);color:var(--marino);font-weight:700;padding:13px;border-radius:10px;text-decoration:none;font-size:16px}
+nav a{display:flex;justify-content:space-between;color:#cfd5e3;text-decoration:none;padding:10px 12px;border-radius:8px;margin-bottom:4px}
+nav a.activo{background:var(--marino-2);color:#fff;box-shadow:inset 3px 0 0 var(--oro)}nav a small{color:#9aa5bf}
+.usuario{margin-top:auto;font-size:13px;color:#aab3c8;border-top:1px solid #2c3d66;padding-top:14px}.usuario b{color:#fff;display:block}
+main{padding:28px 36px;min-width:0}
+h1{font:700 28px/1.2 Georgia,serif;margin:0;color:var(--marino)}
+h2{font:700 19px/1.3 Georgia,serif;margin:0 0 12px;color:var(--marino)}
+.caja{background:#fff;border:1px solid var(--borde);border-radius:12px;padding:18px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:9px;border:1px solid var(--borde);background:#fff;color:var(--marino);font:600 14px system-ui,sans-serif;text-decoration:none;white-space:nowrap;cursor:pointer}
+.btn.oro{background:var(--oro);border-color:var(--oro);color:var(--marino)}
+.btn.marino{background:var(--marino);border-color:var(--marino);color:#fff}
+.btn.peligro{color:var(--rojo);border-color:#f2c4bf}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.chip{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.c-esperando{background:#fff3dc;color:var(--ambar)}.c-completado,.c-firmo{background:#e3f4ea;color:var(--verde)}.c-rechazado,.c-vencido{background:#fde8e6;color:var(--rojo)}.c-borrador,.c-anulado,.c-pendiente{background:#eef0f3;color:var(--gris)}.c-abrio{background:#e6edfb;color:#1d4ed8}
+.sub{color:var(--suave);font-size:13px}
+.aviso{background:#fde8e6;color:var(--rojo);border:1px solid #f2c4bf;border-radius:10px;padding:10px 14px;font-size:14px}
+.info{background:#fff8e6;color:#7a5600;border:1px solid #f0dca0;border-radius:10px;padding:10px 14px;font-size:14px}
+.ok{background:#e3f4ea;color:var(--verde);border:1px solid #b9e2c9;border-radius:10px;padding:10px 14px;font-size:14px}
+input,select,textarea{font:inherit;padding:9px 12px;border:1px solid var(--borde);border-radius:8px;background:#fff;color:var(--texto)}
+label{font-size:13px;color:var(--suave);display:block;margin-bottom:4px}
+.punto{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.solo-compu-aviso{display:none}
+@media (max-width:760px){
+ .app{grid-template-columns:1fr}
+ aside.menu{padding:14px 16px;flex-direction:row;align-items:center;justify-content:space-between}
+ aside.menu nav,aside.menu .usuario,aside.menu .nuevo{display:none}
+ main{padding:18px 16px}h1{font-size:24px}
+}
+
+.grilla{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px}
+.titulo-estado{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--suave);margin-bottom:6px}
+.final{text-align:center;padding:36px 20px}.final .ic{font-size:40px}
+.esq{height:16px;border-radius:6px;background:linear-gradient(90deg,#eee9dc,#f7f3ea,#eee9dc);background-size:200% 100%;margin:12px 0;animation:brillo 1.4s linear infinite}
+@keyframes brillo{to{background-position:-200% 0}}
+@media (prefers-reduced-motion:reduce){.esq{animation:none}}
+@media(max-width:760px){.grilla{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="app"><aside class="menu"><div class="marca">Firma<span>Ya</span></div>
+<a class="nuevo" href="#">+ Nuevo envío</a><nav><a class="activo" href="#">Panel <small>170</small></a><a class="" href="#">Plantillas <small>8</small></a></nav>
+<div class="usuario"><b>Dra. Valentina Montes de Oca</b>valentina.ejemplo@correo.test<br>Español ▾ · Salir</div></aside><main><h1>Estados del panel</h1><p class="sub">Lo que ve el abogado cuando no hay datos, mientras cargan o si algo falla.</p>
+<div class="grilla">
+<div><div class="titulo-estado">Primera vez · sin documentos</div><div class="caja final"><div class="ic">✒️</div><h2>Todavía no enviaste ningún documento</h2><p class="sub">Subí un PDF o un Word, marcá dónde firma cada uno y mandalo.</p><a class="btn oro" href="#">+ Nuevo envío</a> <a class="btn" href="#">Crear una plantilla</a></div></div>
+<div><div class="titulo-estado">Búsqueda sin resultados</div><div class="caja final"><div class="ic">🔍</div><h2>Nada coincide con «Gutiérrez»</h2><p class="sub">Buscamos en títulos, nombres y correos de firmantes.</p><a class="btn" href="#">Limpiar la búsqueda</a></div></div>
+<div><div class="titulo-estado">Cargando</div><div class="caja"><div class="esq" style="width:60%"></div><div class="esq"></div><div class="esq" style="width:80%"></div><div class="esq" style="width:70%"></div></div></div>
+<div><div class="titulo-estado">Sin conexión</div><div class="caja final"><div class="ic">📡</div><h2>Sin conexión</h2><p class="sub">No pudimos traer tus documentos. Lo que hayas guardado no se perdió.</p><a class="btn oro" href="#">Reintentar</a></div></div>
+<div><div class="titulo-estado">Envío hecho</div><div class="ok"><b>Enviado.</b> Marcelo Ocampo, Inês Larralde y vos van a recibir el enlace por correo.</div></div>
+<div><div class="titulo-estado">Error al enviar</div><div class="aviso"><b>No se pudo enviar.</b> Revisá tu conexión y probá de nuevo; el borrador quedó guardado.</div></div>
+<div><div class="titulo-estado">Confirmar anulación</div><div class="caja"><h2>¿Anular este documento?</h2><p class="sub">Los firmantes reciben un aviso y sus enlaces dejan de servir. No se puede deshacer.</p><label>Motivo (obligatorio)</label><textarea rows="2" style="width:100%">Se envió con un error en el monto.</textarea><div style="margin-top:10px;display:flex;gap:8px;justify-content:flex-end"><a class="btn" href="#">Volver</a><a class="btn peligro" href="#">Anular</a></div></div></div>
+<div><div class="titulo-estado">Confirmar borrado</div><div class="caja"><h2>¿Borrar para siempre?</h2><p class="sub">Se borra el documento y su PDF firmado. Los enlaces dejan de mostrarlo. No se puede deshacer.</p><div style="margin-top:10px;display:flex;gap:8px;justify-content:flex-end"><a class="btn" href="#">Volver</a><a class="btn peligro" href="#">Borrar para siempre</a></div></div></div>
+</div></main></div>
+</body>
+</html>

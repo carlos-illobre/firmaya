@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FirmaYa · Plantillas</title>
+<style>
+:root{--marino:#14213d;--marino-2:#1f3260;--oro:#c9a227;--oro-claro:#f5e9c4;--fondo:#faf8f3;--tarjeta:#fff;--texto:#1c2333;--suave:#5b6476;--borde:#e7e2d6;--verde:#1f7a4d;--rojo:#b42318;--ambar:#b26a00;--gris:#6b7280;
+--f1:#2563eb;--f2:#c2410c;--f3:#7c3aed;}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--texto);background:var(--fondo)}
+.app{display:grid;grid-template-columns:248px 1fr;min-height:100vh}
+aside.menu{background:var(--marino);color:#e8ebf3;padding:24px 18px;display:flex;flex-direction:column;gap:22px}
+.marca{font:700 24px/1 Georgia,"Times New Roman",serif;color:#fff;letter-spacing:.3px}.marca span{color:var(--oro)}
+.nuevo{display:block;text-align:center;background:var(--oro);color:var(--marino);font-weight:700;padding:13px;border-radius:10px;text-decoration:none;font-size:16px}
+nav a{display:flex;justify-content:space-between;color:#cfd5e3;text-decoration:none;padding:10px 12px;border-radius:8px;margin-bottom:4px}
+nav a.activo{background:var(--marino-2);color:#fff;box-shadow:inset 3px 0 0 var(--oro)}nav a small{color:#9aa5bf}
+.usuario{margin-top:auto;font-size:13px;color:#aab3c8;border-top:1px solid #2c3d66;padding-top:14px}.usuario b{color:#fff;display:block}
+main{padding:28px 36px;min-width:0}
+h1{font:700 28px/1.2 Georgia,serif;margin:0;color:var(--marino)}
+h2{font:700 19px/1.3 Georgia,serif;margin:0 0 12px;color:var(--marino)}
+.caja{background:#fff;border:1px solid var(--borde);border-radius:12px;padding:18px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:9px;border:1px solid var(--borde);background:#fff;color:var(--marino);font:600 14px system-ui,sans-serif;text-decoration:none;white-space:nowrap;cursor:pointer}
+.btn.oro{background:var(--oro);border-color:var(--oro);color:var(--marino)}
+.btn.marino{background:var(--marino);border-color:var(--marino);color:#fff}
+.btn.peligro{color:var(--rojo);border-color:#f2c4bf}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.chip{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.c-esperando{background:#fff3dc;color:var(--ambar)}.c-completado,.c-firmo{background:#e3f4ea;color:var(--verde)}.c-rechazado,.c-vencido{background:#fde8e6;color:var(--rojo)}.c-borrador,.c-anulado,.c-pendiente{background:#eef0f3;color:var(--gris)}.c-abrio{background:#e6edfb;color:#1d4ed8}
+.sub{color:var(--suave);font-size:13px}
+.aviso{background:#fde8e6;color:var(--rojo);border:1px solid #f2c4bf;border-radius:10px;padding:10px 14px;font-size:14px}
+.info{background:#fff8e6;color:#7a5600;border:1px solid #f0dca0;border-radius:10px;padding:10px 14px;font-size:14px}
+.ok{background:#e3f4ea;color:var(--verde);border:1px solid #b9e2c9;border-radius:10px;padding:10px 14px;font-size:14px}
+input,select,textarea{font:inherit;padding:9px 12px;border:1px solid var(--borde);border-radius:8px;background:#fff;color:var(--texto)}
+label{font-size:13px;color:var(--suave);display:block;margin-bottom:4px}
+.punto{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.solo-compu-aviso{display:none}
+@media (max-width:760px){
+ .app{grid-template-columns:1fr}
+ aside.menu{padding:14px 16px;flex-direction:row;align-items:center;justify-content:space-between}
+ aside.menu nav,aside.menu .usuario,aside.menu .nuevo{display:none}
+ main{padding:18px 16px}h1{font-size:24px}
+}
+
+.cabeza{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:12px}
+.lista{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pl h3{margin:0 0 4px;font:700 17px Georgia,serif;color:var(--marino)}
+.roles{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 14px}.roles span{font-size:12px;padding:3px 9px;border-radius:999px;background:#f4f1e8}
+.pl .acc{display:flex;gap:6px;flex-wrap:wrap}
+.vacia{border:2px dashed #d8cba3;border-radius:12px;display:grid;place-items:center;text-align:center;padding:20px;color:var(--suave)}
+@media(max-width:760px){.lista,.cabeza .btn,.cabeza input,.usar{display:none}.solo-compu-aviso{display:block}}
+</style>
+</head>
+<body>
+<div class="app"><aside class="menu"><div class="marca">Firma<span>Ya</span></div>
+<a class="nuevo" href="#">+ Nuevo envío</a><nav><a class="" href="#">Panel <small>170</small></a><a class="activo" href="#">Plantillas <small>8</small></a></nav>
+<div class="usuario"><b>Dra. Valentina Montes de Oca</b>valentina.ejemplo@correo.test<br>Español ▾ · Salir</div></aside><main>
+<div class="cabeza"><h1>Plantillas</h1><span><input placeholder="Buscar plantilla…"> <a class="btn oro" href="#">+ Nueva plantilla</a></span></div>
+<div class="solo-compu-aviso caja"><h2>Esto se hace en la computadora</h2><p class="sub">Desde el teléfono podés ver el panel y el detalle de cada documento. Para preparar envíos y plantillas, entrá desde una computadora.</p><a class="btn oro" href="#">Ir al panel</a></div>
+<div class="lista">
+<div class="caja pl"><h3>Poder general judicial</h3><div class="sub">1 documento · 3 páginas · usada 41 veces</div><div class="roles"><span>Poderdante</span><span>Apoderado</span></div><div class="acc"><a class="btn oro" href="#">Usar</a><a class="btn" href="#">Editar</a><a class="btn peligro" href="#">Borrar</a></div></div>
+<div class="caja pl"><h3>Convenio de honorarios</h3><div class="sub">2 documentos · 6 páginas · usada 27 veces</div><div class="roles"><span>Cliente</span><span>Abogado</span></div><div class="acc"><a class="btn oro" href="#">Usar</a><a class="btn" href="#">Editar</a><a class="btn peligro" href="#">Borrar</a></div></div>
+<div class="caja pl"><h3>Acuerdo de confidencialidad entre partes de una negociación societaria</h3><div class="sub">1 documento · 5 páginas · usada 9 veces</div><div class="roles"><span>Parte reveladora</span><span>Parte receptora</span><span>Testigo</span></div><div class="acc"><a class="btn oro" href="#">Usar</a><a class="btn" href="#">Editar</a><a class="btn peligro" href="#">Borrar</a></div></div>
+<div class="caja pl"><h3>Contrato de locación de vivienda</h3><div class="sub">1 documento · 8 páginas · usada 5 veces</div><div class="roles"><span>Locador</span><span>Locatario</span><span>Garante</span></div><div class="acc"><a class="btn oro" href="#">Usar</a><a class="btn" href="#">Editar</a><a class="btn peligro" href="#">Borrar</a></div></div>
+<div class="vacia"><div><b>Guardá un documento que usás seguido</b><br>con sus campos ya puestos.<br><br><a class="btn" href="#">+ Nueva plantilla</a></div></div>
+</div>
+<div class="caja usar" style="margin-top:22px"><h2>Usar «Convenio de honorarios»</h2><p class="sub">Cargá quién ocupa cada papel. Los campos ya están colocados.</p>
+<div style="display:grid;grid-template-columns:140px 1fr 1fr 140px;gap:10px;align-items:end">
+<b>Cliente</b><div><label>Nombre</label><input style="width:100%" value="Marcelo Ocampo"></div><div><label>Correo</label><input style="width:100%" value="marcelo.ejemplo@correo.test"></div><div><label>Idioma</label><select style="width:100%"><option>Español</option></select></div>
+<b>Abogado</b><div><input style="width:100%" value="Valentina Montes de Oca (vos)"></div><div><input style="width:100%" value="valentina.ejemplo@correo.test"></div><div><select style="width:100%"><option>Español</option></select></div></div>
+<div style="margin-top:14px;display:flex;gap:8px;justify-content:flex-end"><a class="btn" href="#">Cancelar</a><a class="btn" href="#">Revisar campos</a><a class="btn oro" href="#">Enviar</a></div></div>
+</main></div>
+</body>
+</html>
