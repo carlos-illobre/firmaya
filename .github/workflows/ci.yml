@@ -1,0 +1,23 @@
+# Mientras no hay código, el CI controla solo la documentación. Las pruebas del código se
+# suman con el primer código.
+name: ci
+
+on:
+  push:
+    branches: ['**']
+
+permissions:
+  contents: read
+
+jobs:
+  documentacion:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Especificación y estado
+        run: node tests/trazabilidad.mjs
+      - name: Forma de los tasks.md
+        run: node tests/compuerta.mjs revisar

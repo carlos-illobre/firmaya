@@ -1,0 +1,29 @@
+# Ficha del proyecto. La lee el portafolio (github.com/carlos-illobre/portafolio) y es la
+# fuente de verdad de objetivos, interesados, supuestos, restricciones y cronograma.
+# Se completa con lo que Carlos cuente del producto en el paso 1.
+nombre: FirmaYa
+tipo: software
+estado: idea
+resumen: Proyecto nuevo con spec driven development; el producto todavía no está descripto.
+
+objetivos:
+  corto: []
+  mediano: []
+  largo: []
+
+criterios_de_exito: []
+
+interesados:
+  - nombre: Carlos
+    rol: Dueño
+    interes: Definir el producto
+
+supuestos: []
+
+restricciones:
+  - El repositorio es público; ningún dato real ni secreto entra en él
+
+requerimientos: specs/README.md
+estado_de_requerimientos: proyecto/estado.yml
+
+cronograma: []

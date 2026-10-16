@@ -1,0 +1,10 @@
+# Cómo está hoy cada requerimiento. Las reglas están en specs/ y no dependen de esto: si el
+# código se rehace, este archivo se reinicia y las especificaciones quedan como están.
+#
+#   estado    Empieza con Hecho, Hecho en parte, A validar, Pendiente o Nuevo. Si dice
+#             «fuera de esta etapa», no cuenta para el avance. Un #19 es la tarea T019 de proyecto/tasks.md.
+#   pruebas   Los archivos de prueba que respaldan el requerimiento.
+#   defectos  Dónde el código de hoy se aparta de la regla, o qué le falta.
+#
+# Lo leen el tablero del portafolio y tests/trazabilidad.mjs. Todo texto va entre comillas.
+# Todavía no hay requerimientos.

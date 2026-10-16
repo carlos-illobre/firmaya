@@ -1,0 +1,11 @@
+.env
+node_modules/
+dist/
+coverage/
+.DS_Store
+# Carpeta de trabajo descartable: nada de acá se versiona ni sobrevive a la tarea
+tmp/
+# Temporales de la sesión de Claude
+.claude/settings.local.json
+# Qué tarea tiene empezada cada sesión: lo usa la compuerta del flujo de trabajo
+.specify/en-curso.json
