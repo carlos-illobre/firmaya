@@ -12,3 +12,12 @@ anteriores no se reescriben: si una cambia, se agrega la nueva y se anota a cuá
 2. Se desarrolla con la misma metodología de spec driven development que `ferre` y
    `cocinadas`.
 3. Es el proyecto de menor prioridad del portafolio, después de todos los demás.
+
+## Decisiones del 2026-10-16 (primera descripción del producto)
+
+4. FirmaYa es una aplicación de **firma electrónica** en la línea de DocuSign, y **solo
+   eso**: ninguna otra capacidad fuera de la firma.
+5. Está **orientada a abogados**.
+6. El aspecto gráfico tiene que ser mejor que el de DocuSign: una paleta de colores **más
+   llamativa pero profesional**, pensada para abogados.
+7. La navegación tiene que ser **sencilla** y las opciones **fáciles de encontrar**.

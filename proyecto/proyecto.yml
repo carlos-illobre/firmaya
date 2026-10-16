@@ -4,7 +4,7 @@
 nombre: FirmaYa
 tipo: software
 estado: idea
-resumen: Proyecto nuevo con spec driven development; el producto todavía no está descripto.
+resumen: Firma electrónica de documentos para abogados, en la línea de DocuSign, con un aspecto más cuidado y una navegación sencilla.
 
 objetivos:
   corto: []

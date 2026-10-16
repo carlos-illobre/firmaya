@@ -17,7 +17,7 @@ terminarla se marca `[x]`; no se borra.
 
 - [x] T001 [agente] Borrar la primera versión, programada sin especificación
 - [x] T002 [agente] Preparar el repositorio con la metodología de spec driven development
-- [ ] T003 [carlos] [alta] Contarle el producto al agente para el paso 1 de la primera capacidad
-- [ ] T004 [agente] [alta] Especificar la primera capacidad con /speckit-specify y /speckit-clarify (depende de T003)
+- [x] T003 [carlos] [alta] Contarle el producto al agente para el paso 1 de la primera capacidad
+- [ ] T004 [agente] [alta] [en curso] Especificar la primera capacidad con /speckit-specify y /speckit-clarify (depende de T003)
 - [ ] T005 [carlos] [alta] Aprobar la especificación de la primera capacidad (depende de T004)
 - [x] T006 [agente] Anotar que es el proyecto de menor prioridad del portafolio
